@@ -1,0 +1,32 @@
+.navbar {
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: var(--dark);
+    margin: 0;
+    padding: 0.5rem;
+    width: 100%;
+    justify-content: space-between;
+    list-style: none;
+    padding-left: 0;
+}
+
+.navbar-item {
+    list-style: none;
+    text-align: center;
+    color: var(--offWhite);
+    flex: 1;
+}
+
+.navbar-link {
+    text-decoration: none;
+    font-family: "Quicksand", sans-serif;
+    letter-spacing: 1px;
+}
+
+.navbar-logout {
+    margin-left: 0;
+}
+
+.navbar-link:hover {
+    color: var(--primary);
+}
