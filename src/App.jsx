@@ -1,22 +1,33 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { Routes, Route, Outlet } from 'react-router-dom'
+import { NavBar } from './components/nav/NavBar'
+import { SessionList } from './components/sessions/Session'
+import { Login } from './components/auth/Login'
+import { Register } from './components/auth/Register'
+import { Dashboard } from './components/dashboard/Dashboard'
+import { useState, useEffect } from 'react'
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+export const App = () => {
+  const [sessions, setSessions] = useState([])
+  const isLoggedIn = !!localStorage.getItem("honey_user");
 
   return (
-    <>
-      <div>
-      </div>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-      </div>
-    </>
+    <Routes>
+       <Route
+        path="/"
+        element={
+          <>
+            {isLoggedIn && <NavBar />}
+            <Outlet />
+          </>
+        }
+      >
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/sessions" element={<SessionList sessions={sessions} />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/" element={<Login />} />
+      </Route>
+    </Routes>
   )
 }
-
-export default App

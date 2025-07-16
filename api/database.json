@@ -1,250 +1,263 @@
 {
-  "users": [
-    {
-      "id": 1,
-      "email": "john.doe@email.com",
-      "password": "hashedpassword123"
-    },
-    {
-      "id": 2,
-      "email": "jane.smith@email.com",
-      "password": "hashedpassword456"
-    },
-    {
-      "id": 3,
-      "email": "mike.wilson@email.com",
-      "password": "hashedpassword789"
-    },
-    {
-      "id": 4,
-      "email": "sarah.jones@email.com",
-      "password": "hashedpassword101"
-    }
-  ],
-  "weaponTypes": [
-    {
-      "id": 1,
-      "name": "Sword"
-    },
-    {
-      "id": 2,
-      "name": "Bow"
-    },
-    {
-      "id": 3,
-      "name": "Staff"
-    },
-    {
-      "id": 4,
-      "name": "Dagger"
-    },
-    {
-      "id": 5,
-      "name": "Spear"
-    },
-    {
-      "id": 6,
-      "name": "Unarmed"
-    }
-  ],
-  "trainingTypes": [
-    {
-      "id": 1,
-      "name": "Technique Practice"
-    },
-    {
-      "id": 2,
-      "name": "Sparring"
-    },
-    {
-      "id": 3,
-      "name": "Form Training"
-    },
-    {
-      "id": 4,
-      "name": "Conditioning"
-    },
-    {
-      "id": 5,
-      "name": "Meditation"
-    },
-    {
-      "id": 6,
-      "name": "Weapon Maintenance"
-    }
-  ],
-  "traingingFocuses": [
-    {
-      "id": 1,
-      "name": "Footwork"
-    },
-    {
-      "id": 2,
-      "name": "Precision"
-    },
-    {
-      "id": 3,
-      "name": "Speed"
-    },
-    {
-      "id": 4,
-      "name": "Power"
-    },
-    {
-      "id": 5,
-      "name": "Defense"
-    },
-    {
-      "id": 6,
-      "name": "Flexibility"
-    },
-    {
-      "id": 7,
-      "name": "Endurance"
-    },
-    {
-      "id": 8,
-      "name": "Balance"
-    }
-  ],
-  "sessionFocuses": [
-    {
-      "sessionId": 1,
-      "focusId": 1
-    },
-    {
-      "sessionId": 1,
-      "focusId": 2
-    },
-    {
-      "sessionId": 2,
-      "focusId": 3
-    },
-    {
-      "sessionId": 3,
-      "focusId": 4
-    },
-    {
-      "sessionId": 3,
-      "focusId": 5
-    },
-    {
-      "sessionId": 4,
-      "focusId": 6
-    },
-    {
-      "sessionId": 5,
-      "focusId": 7
-    },
-    {
-      "sessionId": 6,
-      "focusId": 2
-    },
-    {
-      "sessionId": 6,
-      "focusId": 8
-    },
-    {
-      "sessionId": 7,
-      "focusId": 1
-    },
-    {
-      "sessionId": 8,
-      "focusId": 3
-    },
-    {
-      "sessionId": 8,
-      "focusId": 4
-    }
-  ],
-  "trainingSessions": [
-    {
-      "id": 1,
-      "userId": 1,
-      "date": "2024-01-15",
-      "duration": 90,
-      "weaponTypeId": 1,
-      "trainingTypeId": 1,
-      "focusId": 1,
-      "intensity": 7,
-      "notes": "Worked on basic sword forms and footwork patterns"
-    },
-    {
-      "id": 2,
-      "userId": 1,
-      "date": "2024-01-17",
-      "duration": 60,
-      "weaponTypeId": 2,
-      "trainingTypeId": 2,
-      "focusId": 2,
-      "intensity": 8,
-      "notes": "Archery practice focusing on precision and aim"
-    },
-    {
-      "id": 3,
-      "userId": 2,
-      "date": "2024-01-18",
-      "duration": 75,
-      "weaponTypeId": 3,
-      "trainingTypeId": 3,
-      "focusId": 3,
-      "intensity": 6,
-      "notes": "Staff form training with emphasis on flowing movements"
-    },
-    {
-      "id": 4,
-      "userId": 2,
-      "date": "2024-01-20",
-      "duration": 45,
-      "weaponTypeId": 6,
-      "trainingTypeId": 5,
-      "focusId": 4,
-      "intensity": 4,
-      "notes": "Meditation session focusing on inner strength and balance"
-    },
-    {
-      "id": 5,
-      "userId": 3,
-      "date": "2024-01-22",
-      "duration": 120,
-      "weaponTypeId": 4,
-      "trainingTypeId": 4,
-      "focusId": 5,
-      "intensity": 9,
-      "notes": "Intensive dagger training with conditioning exercises"
-    },
-    {
-      "id": 6,
-      "userId": 3,
-      "date": "2024-01-24",
-      "duration": 90,
-      "weaponTypeId": 5,
-      "trainingTypeId": 1,
-      "focusId": 6,
-      "intensity": 7,
-      "notes": "Spear technique practice with flexibility work"
-    },
-    {
-      "id": 7,
-      "userId": 4,
-      "date": "2024-01-25",
-      "duration": 60,
-      "weaponTypeId": 1,
-      "trainingTypeId": 2,
-      "focusId": 7,
-      "intensity": 8,
-      "notes": "Sword sparring session focusing on endurance"
-    },
-    {
-      "id": 8,
-      "userId": 4,
-      "date": "2024-01-27",
-      "duration": 105,
-      "weaponTypeId": 2,
-      "trainingTypeId": 3,
-      "focusId": 8,
-      "intensity": 6,
-      "notes": "Bow form practice with balance and stance work"
-    }
-  ]
-}
+    "users": [
+      {
+        "id": 1,
+        "email": "john.doe@email.com",
+        "password": "hashedpassword123"
+      },
+      {
+        "id": 2,
+        "email": "jane.smith@email.com",
+        "password": "hashedpassword456"
+      },
+      {
+        "id": 3,
+        "email": "mike.wilson@email.com",
+        "password": "hashedpassword789"
+      },
+      {
+        "id": 4,
+        "email": "sarah.jones@email.com",
+        "password": "hashedpassword101"
+      }
+    ],
+
+    "weaponTypes": [
+      {
+        "id": 1,
+        "name": "Sword"
+      },
+      {
+        "id": 2,
+        "name": "Mace and Shield"
+      },
+      {
+        "id": 3,
+        "name": "Halberd"
+      },
+      {
+        "id": 4,
+        "name": "Dagger"
+      },
+      {
+        "id": 5,
+        "name": "Spear"
+      },
+      {
+        "id": 6,
+        "name": "Unarmed"
+      }
+    ],
+
+    "trainingTypes": [
+      {
+        "id": 1,
+        "name": "Technique Practice"
+      },
+      {
+        "id": 2,
+        "name": "Sparring"
+      },
+      {
+        "id": 3,
+        "name": "Form Training"
+      },
+      {
+        "id": 4,
+        "name": "Conditioning"
+      },
+      {
+        "id": 5,
+        "name": "Meditation"
+      },
+      {
+        "id": 6,
+        "name": "Weapon Maintenance"
+      }
+    ],
+
+    "trainingFocuses": [
+      {
+        "id": 1,
+        "name": "Footwork"
+      },
+      {
+        "id": 2,
+        "name": "Precision"
+      },
+      {
+        "id": 3,
+        "name": "Speed"
+      },
+      {
+        "id": 4,
+        "name": "Power"
+      },
+      {
+        "id": 5,
+        "name": "Defense"
+      },
+      {
+        "id": 6,
+        "name": "Flexibility"
+      },
+      {
+        "id": 7,
+        "name": "Endurance"
+      },
+      {
+        "id": 8,
+        "name": "Balance"
+      }
+    ],
+
+    "sessionFocuses": [
+      {
+        "sessionId": 1,
+        "focusId": 1
+      },
+      {
+        "sessionId": 1,
+        "focusId": 2
+      },
+      {
+        "sessionId": 2,
+        "focusId": 3
+      },
+      {
+        "sessionId": 3,
+        "focusId": 4
+      },
+      {
+        "sessionId": 3,
+        "focusId": 5
+      },
+      {
+        "sessionId": 4,
+        "focusId": 6
+      },
+      {
+        "sessionId": 5,
+        "focusId": 7
+      },
+      {
+        "sessionId": 6,
+        "focusId": 2
+      },
+      {
+        "sessionId": 6,
+        "focusId": 8
+      },
+      {
+        "sessionId": 7,
+        "focusId": 1
+      },
+      {
+        "sessionId": 8,
+        "focusId": 3
+      },
+      {
+        "sessionId": 8,
+        "focusId": 4
+      }
+    ],
+
+    "trainingSessions": [
+      {
+        "id": 1,
+        "userId": 1,
+        "title": "Sword Training",
+        "date": "2024-01-15",
+        "duration": 90,
+        "weaponTypeId": 1,
+        "trainingTypeId": 1,
+        "focusId": 1,
+        "intensity": 7,
+        "notes": "Worked on basic sword forms and footwork patterns"
+      },
+      {
+        "id": 2,
+        "userId": 1,
+        "title": "Mace and Shield Training",
+        "date": "2024-01-17",
+        "duration": 60,
+        "weaponTypeId": 2,
+        "trainingTypeId": 2,
+        "focusId": 2,
+        "intensity": 8,
+        "notes": "Focused on defensive maneuvers and shield techniques"
+      },
+      {
+        "id": 3,
+        "userId": 2,
+        "title": "Halberd Training",
+        "date": "2024-01-18",
+        "duration": 75,
+        "weaponTypeId": 3,
+        "trainingTypeId": 3,
+        "focusId": 3,
+        "intensity": 6,
+        "notes": "Practiced halberd forms with emphasis on precision and speed"
+      },
+      {
+        "id": 4,
+        "userId": 2,
+        "title": "Unarmed Training",
+        "date": "2024-01-20",
+        "duration": 45,
+        "weaponTypeId": 6,
+        "trainingTypeId": 5,
+        "focusId": 4,
+        "intensity": 4,
+        "notes": "Meditation and unarmed combat techniques focusing on power and defense"
+      },
+      {
+        "id": 5,
+        "userId": 3,
+        "title": "Dagger Training",
+        "date": "2024-01-22",
+        "duration": 120,
+        "weaponTypeId": 4,
+        "trainingTypeId": 4,
+        "focusId": 5,
+        "intensity": 9,
+        "notes": "Intensive dagger training with conditioning exercises"
+      },
+      {
+        "id": 6,
+        "userId": 3,
+        "title": "Spear Training",
+        "date": "2024-01-24",
+        "duration": 90,
+        "weaponTypeId": 5,
+        "trainingTypeId": 1,
+        "focusId": 6,
+        "intensity": 7,
+        "notes": "Spear technique practice with flexibility work"
+      },
+      {
+        "id": 7,
+        "userId": 4,
+        "title": "Sword Sparring",
+        "date": "2024-01-25",
+        "duration": 60,
+        "weaponTypeId": 1,
+        "trainingTypeId": 2,
+        "focusId": 7,
+        "intensity": 8,
+        "notes": "Sword sparring session focusing on endurance"
+      },
+      {
+        "id": 8,
+        "userId": 4,
+        "title": "Mace and Shield Sparring",
+        "date": "2024-01-27",
+        "duration": 105,
+        "weaponTypeId": 2,
+        "trainingTypeId": 3,
+        "focusId": 8,
+        "intensity": 6,
+        "notes": "Mace and shield form training with balance exercises"
+      }
+    ]
+  }
