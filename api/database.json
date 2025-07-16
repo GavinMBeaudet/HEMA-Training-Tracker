@@ -178,38 +178,38 @@
       {
         "id": 2,
         "userId": 1,
-        "title": "Mace and Shield Training",
+        "title": "Mace and Shield Practice",
         "date": "2024-01-17",
         "duration": 60,
         "weaponTypeId": 2,
         "trainingTypeId": 2,
         "focusId": 2,
         "intensity": 8,
-        "notes": "Focused on defensive maneuvers and shield techniques"
+        "notes": "Sparring session focusing on mace strikes and shield blocks"
       },
       {
         "id": 3,
         "userId": 2,
-        "title": "Halberd Training",
+        "title": "Staff Form Training",
         "date": "2024-01-18",
         "duration": 75,
         "weaponTypeId": 3,
         "trainingTypeId": 3,
         "focusId": 3,
         "intensity": 6,
-        "notes": "Practiced halberd forms with emphasis on precision and speed"
+        "notes": "Staff form training with emphasis on flowing movements"
       },
       {
         "id": 4,
         "userId": 2,
-        "title": "Unarmed Training",
+        "title": "Meditation",
         "date": "2024-01-20",
         "duration": 45,
         "weaponTypeId": 6,
         "trainingTypeId": 5,
         "focusId": 4,
         "intensity": 4,
-        "notes": "Meditation and unarmed combat techniques focusing on power and defense"
+        "notes": "Meditation session focusing on inner strength and balance"
       },
       {
         "id": 5,
@@ -250,14 +250,14 @@
       {
         "id": 8,
         "userId": 4,
-        "title": "Mace and Shield Sparring",
+        "title": "Mace and Shield Practice",
         "date": "2024-01-27",
         "duration": 105,
         "weaponTypeId": 2,
         "trainingTypeId": 3,
         "focusId": 8,
         "intensity": 6,
-        "notes": "Mace and shield form training with balance exercises"
+        "notes": "Mace and shield practice focusing on defense and counter-attacks"
       }
     ]
   }

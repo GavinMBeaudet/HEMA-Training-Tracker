@@ -15,7 +15,7 @@ export const SessionList = () => {
     return (
         <div>
             <h1>Session List</h1>
-            <button>New Training Session</button>
+            <button>+ New Training Session</button>
             <ul>
                 {userSessions.map(session => (
                     <div key={session.id}>
