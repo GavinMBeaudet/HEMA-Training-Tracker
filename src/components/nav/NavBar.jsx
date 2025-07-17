@@ -15,8 +15,8 @@ export const NavBar = () => {
       className="navbar-link"
       to=""
       onClick={() => {
-        localStorage.removeItem("honey_user")
-        navigate("/", { replace: true })
+        localStorage.removeItem("HEMA_user")
+        navigate("/")
       }}
     >Logout</Link>
             </li>

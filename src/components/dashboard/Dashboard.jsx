@@ -11,7 +11,7 @@ export const Dashboard = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const user = JSON.parse(localStorage.getItem('honey_user'));
+    const user = JSON.parse(localStorage.getItem('HEMA_user'));
     const userId = user?.id;
     getUserSessions().then((sessions) => {
       const userSessions = sessions.filter(session => session.userId === userId);

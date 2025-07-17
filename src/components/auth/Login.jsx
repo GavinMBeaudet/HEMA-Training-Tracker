@@ -4,24 +4,25 @@ import { useNavigate } from "react-router-dom"
 import "./Login.css"
 import { loginUser } from "../../services/userService"
 
-export const Login = () => {
+export const Login = ({ setIsLoggedIn }) => {
   const [email, setEmail] = useState("john.doe@email.com")
   const [password, setPassword] = useState("hashedpassword123")
   const navigate = useNavigate()
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault()
 
     loginUser(email, password).then((foundUsers) => {
       if (foundUsers.length === 1) {
         const user = foundUsers[0]
         localStorage.setItem(
-          "honey_user",
+          "HEMA_user",
           JSON.stringify({
             id: user.id,
             isStaff: user.isStaff,
           })
         )
+        setIsLoggedIn(true)
 
         navigate("/dashboard")
       } else {

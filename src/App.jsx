@@ -10,8 +10,7 @@ import { EditSession } from './components/sessions/EditSession';
 import './App.css'
 
 export const App = () => {
-  const [sessions, setSessions] = useState([])
-  const isLoggedIn = !!localStorage.getItem("honey_user");
+  const [isLoggedIn, setIsLoggedIn] = useState(!!localStorage.getItem("HEMA_user"));
 
   return (
     <Routes>
@@ -25,12 +24,12 @@ export const App = () => {
         }
       >
         <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/sessions" element={<SessionList sessions={sessions} />} />
+        <Route path="/sessions" element={<SessionList />} />
         <Route path="/sessions/new" element={<NewSession />} />
         <Route path="/sessions/edit/:id" element={<EditSession />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/" element={<Login />} />
+        <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} />} />
+        <Route path="/register" element={<Register setIsLoggedIn={setIsLoggedIn} />} />
+        <Route path="/" element={<Login setIsLoggedIn={setIsLoggedIn} />} />
       </Route>
     </Routes>
   )

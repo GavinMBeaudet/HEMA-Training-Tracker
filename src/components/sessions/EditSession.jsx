@@ -29,7 +29,7 @@ export const EditSession = () => {
     getTrainingFocuses().then(setTrainingFocuses);
     // Fetch the session to edit
     getUserSessions().then((sessions) => {
-      const session = sessions.find(s => s.id === Number(id));
+      const session = sessions.find(session => session.id === Number(id));
       if (session) {
         setDate(session.date || "");
         setDuration(session.duration || "");
@@ -52,7 +52,7 @@ export const EditSession = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const user = JSON.parse(localStorage.getItem("honey_user"));
+    const user = JSON.parse(localStorage.getItem("HEMA_user"));
     const updatedSession = {
       userId: user.id,
       date,

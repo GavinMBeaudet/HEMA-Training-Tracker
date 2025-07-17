@@ -9,12 +9,12 @@ export const SessionList = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        getUserSessions().then(data => setSessions(data))
+        getUserSessions().then(trainingSessionObj => setSessions(trainingSessionObj))
         getTrainingFocuses().then(setFocuses)
     }, [])
 
-    const user = JSON.parse(localStorage.getItem("honey_user"))
-    const userId = user?.id
+    const user = JSON.parse(localStorage.getItem("HEMA_user"))
+    const userId = user.id
     const userSessions = sessions.filter(session => session.userId === userId)
 
     const handleDelete = async (id) => {

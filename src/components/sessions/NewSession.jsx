@@ -36,7 +36,7 @@ export const NewSession = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const user = JSON.parse(localStorage.getItem("honey_user"));
+    const user = JSON.parse(localStorage.getItem("HEMA_user"));
     const session = {
       userId: user.id,
       date,

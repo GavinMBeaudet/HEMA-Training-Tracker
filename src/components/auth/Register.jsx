@@ -3,7 +3,7 @@ import { useNavigate, Link } from "react-router-dom"
 import "./Login.css"
 import { createUser, getUserByEmail } from "../../services/userService"
 
-export const Register = (props) => {
+export const Register = ({ setIsLoggedIn }) => {
   const [user, setUser] = useState({
     email: "",
     password: ""
@@ -15,12 +15,12 @@ export const Register = (props) => {
     createUser(user).then((createdUser) => {
       if (createdUser.hasOwnProperty("id")) {
         localStorage.setItem(
-          "honey_user",
+          "HEMA_user",
           JSON.stringify({
             id: createdUser.id
           })
         )
-
+        setIsLoggedIn(true)
         navigate("/")
       }
     })

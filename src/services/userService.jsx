@@ -5,7 +5,6 @@ export const getUserByEmail = (email) => {
   }
 
 export const createUser = (user) => {
-    // user should be an object with email and password
     return fetch("http://localhost:8088/users", {
       method: "POST",
       headers: {
@@ -16,6 +15,6 @@ export const createUser = (user) => {
 }
 
 export const loginUser = (email, password) => {
-    return fetch(`http://localhost:8088/users?email=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}`)
+    return fetch(`http://localhost:8088/users?email=${email}&password=${password}`)
       .then((res) => res.json())
 }
