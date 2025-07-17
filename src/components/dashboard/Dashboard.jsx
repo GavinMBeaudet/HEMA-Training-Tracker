@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { getUserSessions } from '../../services/userSessions';
+import { useNavigate } from 'react-router-dom';
 
 export const Dashboard = () => {
   const [stats, setStats] = useState({
@@ -7,6 +8,7 @@ export const Dashboard = () => {
     hoursTrained: 0,
     avgIntensity: 0
   });
+  const navigate = useNavigate();
 
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem('honey_user'));
@@ -54,7 +56,7 @@ export const Dashboard = () => {
           <p>Avg Intensity</p>
         </div>
       </div>
-      <button>+ New Training Session</button>
+      <button onClick={() => navigate('/sessions/new')}>+ New Training Session</button>
     </div>
   );
 }
