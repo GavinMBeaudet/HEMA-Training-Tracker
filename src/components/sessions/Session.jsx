@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react"
+import { getUserSessions } from '../../services/userSessions'
+import { useNavigate } from "react-router-dom";
 
-import { getUserSessions } from "../../services/userSessions"
 export const SessionList = () => {
     const [sessions, setSessions] = useState([])
+    const navigate = useNavigate();
 
     useEffect(() => {
         getUserSessions().then(data => setSessions(data))
@@ -15,7 +17,7 @@ export const SessionList = () => {
     return (
         <div>
             <h1>Session List</h1>
-            <button>+ New Training Session</button>
+            <button onClick={() => navigate("/sessions/new")}>+ New Training Session</button>
             <ul>
                 {userSessions.map(session => (
                     <div key={session.id}>
@@ -24,6 +26,8 @@ export const SessionList = () => {
                         <p>Duration: {session.duration} minutes</p>
                         <p>Intensity: {session.intensity}</p>
                         <p>Notes: {session.notes}</p>
+                        <button>Edit</button>
+                        <button>Delete</button>
                     </div>
                 ))}
             </ul>
