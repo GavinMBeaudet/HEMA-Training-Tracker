@@ -6,6 +6,7 @@ import { Login } from './components/auth/Login'
 import { Register } from './components/auth/Register'
 import { Dashboard } from './components/dashboard/Dashboard'
 import { useState } from 'react'
+import { EditSession } from './components/sessions/EditSession';
 import './App.css'
 
 export const App = () => {
@@ -26,6 +27,7 @@ export const App = () => {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/sessions" element={<SessionList sessions={sessions} />} />
         <Route path="/sessions/new" element={<NewSession />} />
+        <Route path="/sessions/edit/:id" element={<EditSession />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/" element={<Login />} />

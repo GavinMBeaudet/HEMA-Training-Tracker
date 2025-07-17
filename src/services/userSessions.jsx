@@ -23,3 +23,19 @@ export const createTrainingSession = (session) => {
         body: JSON.stringify(session),
     }).then(res => res.json());
 }
+
+export const deleteTrainingSession = (id) => {
+  return fetch(`http://localhost:8088/trainingSessions/${id}`, {
+    method: 'DELETE'
+  });
+};
+
+export const updateTrainingSession = (id, updatedSession) => {
+  return fetch(`http://localhost:8088/trainingSessions/${id}`, {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(updatedSession),
+  }).then(res => res.json());
+};

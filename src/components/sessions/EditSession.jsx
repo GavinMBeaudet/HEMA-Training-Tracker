@@ -1,14 +1,17 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import {
   getWeaponTypes,
   getTrainingTypes,
   getTrainingFocuses,
-  createTrainingSession,
+  updateTrainingSession,
+  getUserSessions,
 } from "../../services/userSessions";
 
-export const NewSession = () => {
+export const EditSession = () => {
   const navigate = useNavigate();
+  const { id } = useParams();
+
   const [date, setDate] = useState("");
   const [duration, setDuration] = useState("");
   const [weaponType, setWeaponType] = useState("");
@@ -24,36 +27,49 @@ export const NewSession = () => {
     getWeaponTypes().then(setWeaponTypes);
     getTrainingTypes().then(setTrainingTypes);
     getTrainingFocuses().then(setTrainingFocuses);
-  }, []);
+    // Fetch the session to edit
+    getUserSessions().then((sessions) => {
+      const session = sessions.find(s => s.id === Number(id));
+      if (session) {
+        setDate(session.date || "");
+        setDuration(session.duration || "");
+        setWeaponType(session.weaponTypeId || "");
+        setTrainingType(session.trainingTypeId || "");
+        setIntensity(session.intensity || "");
+        setNotes(session.notes || "");
+        setFocusAreas(session.focusAreas || []);
+      }
+    });
+  }, [id]);
 
-  const handleFocusAreaChange = (id) => {
+  const handleFocusAreaChange = (focusId) => {
     setFocusAreas((prev) =>
-      prev.includes(id)
-        ? prev.filter((focusId) => focusId !== id)
-        : [...prev, id]
+      prev.includes(focusId)
+        ? prev.filter((id) => id !== focusId)
+        : [...prev, focusId]
     );
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     const user = JSON.parse(localStorage.getItem("honey_user"));
-    const session = {
+    const updatedSession = {
       userId: user.id,
       date,
       duration,
       weaponTypeId: weaponType,
       trainingTypeId: trainingType,
-      intensity: Number(intensity),
+      intensity,
       notes,
       focusAreas,
     };
-    await createTrainingSession(session);
+    await updateTrainingSession(id, updatedSession);
     navigate("/sessions");
   };
 
   return (
     <div>
-      <h1>New Training Sessions</h1>
+      <h1>Edit Training Session</h1>
       <form onSubmit={handleSubmit}>
         <div>
           <label>Date</label>
@@ -134,7 +150,7 @@ export const NewSession = () => {
           />
         </div>
         <div>
-          <button type="submit">SAVE TRAINING SESSION</button>
+          <button type="submit">SAVE CHANGES</button>
           <button type="button" onClick={() => navigate("/sessions")}>
             CANCEL
           </button>

@@ -29,6 +29,11 @@
       "email": "me@me.com",
       "password": "me",
       "id": 6
+    },
+    {
+      "email": "gghhhg@memail.com",
+      "password": "dink",
+      "id": 7
     }
   ],
   "weaponTypes": [
@@ -169,28 +174,35 @@
   ],
   "trainingSessions": [
     {
-      "id": 1,
       "userId": 1,
-      "title": "Sword Training",
       "date": "2024-01-15",
       "duration": 90,
       "weaponTypeId": 1,
       "trainingTypeId": 1,
-      "focusId": 1,
       "intensity": 7,
-      "notes": "Worked on basic sword forms and footwork patterns"
+      "notes": "Worked on basic sword forms and footwork patterns",
+      "focusAreas": [
+        5,
+        4,
+        7
+      ],
+      "id": 1
     },
     {
-      "id": 2,
       "userId": 1,
-      "title": "Mace and Shield Practice",
       "date": "2024-01-17",
       "duration": 60,
       "weaponTypeId": 2,
       "trainingTypeId": 2,
-      "focusId": 2,
       "intensity": 8,
-      "notes": "Sparring session focusing on mace strikes and shield blocks"
+      "notes": "Sparring session focusing on mace strikes and shield blocks",
+      "focusAreas": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "id": 2
     },
     {
       "id": 3,
@@ -263,6 +275,21 @@
       "focusId": 8,
       "intensity": 6,
       "notes": "Mace and shield practice focusing on defense and counter-attacks"
+    },
+    {
+      "userId": 1,
+      "date": "2025-07-17",
+      "duration": "60",
+      "weaponTypeId": "2",
+      "trainingTypeId": "2",
+      "intensity": "8",
+      "notes": "Sparred for an hour against Bob",
+      "focusAreas": [
+        7,
+        4,
+        5
+      ],
+      "id": 9
     }
   ]
 }

@@ -27,7 +27,7 @@ export const Dashboard = () => {
 
       let totalIntensity = 0;
       for (const s of userSessions) {
-        totalIntensity += s.intensity || 0;
+        totalIntensity += Number(s.intensity) || 0;
       }
       let avgIntensity = userSessions.length > 0 ? (totalIntensity / userSessions.length).toFixed(1) : 0;
 
