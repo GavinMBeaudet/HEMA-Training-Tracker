@@ -182,7 +182,11 @@
       "trainingTypeId": 1,
       "intensity": 7,
       "notes": "Worked on basic sword forms and footwork patterns",
-      "focusAreas": [5, 4, 7],
+      "focusAreas": [
+        5,
+        4,
+        7
+      ],
       "id": 1
     },
     {
@@ -194,7 +198,12 @@
       "trainingTypeId": 2,
       "intensity": 8,
       "notes": "Sparring session focusing on mace strikes and shield blocks",
-      "focusAreas": [1, 2, 3, 4],
+      "focusAreas": [
+        1,
+        2,
+        3,
+        4
+      ],
       "id": 2
     },
     {
@@ -278,8 +287,28 @@
       "trainingTypeId": "1",
       "intensity": "5",
       "notes": "Just ran through a kata before work.",
-      "focusAreas": [1],
+      "focusAreas": [
+        1
+      ],
       "id": 10
+    },
+    {
+      "userId": 1,
+      "title": "Title",
+      "date": "",
+      "duration": "0",
+      "weaponTypeId": "",
+      "trainingTypeId": "",
+      "intensity": 1,
+      "notes": "wack",
+      "focusAreas": [
+        1,
+        4,
+        5,
+        7,
+        8
+      ],
+      "id": 11
     }
   ]
 }

@@ -79,6 +79,7 @@ export const NewSession = () => {
           <label>Duration(minutes)</label>
           <input
             type="number"
+            min="1"
             value={duration}
             onChange={(event) => setDuration(event.target.value)}
           />
