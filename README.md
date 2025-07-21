@@ -29,7 +29,7 @@ HEMA Tracker is a web application for tracking Historical European Martial Arts 
    ```bash
    npm run dev
    ```
-4. The app will be available at [http://localhost:5173](http://localhost:5173)
+4. The app will be available at [http://localhost:5173]
 
 ### Mock API Setup
 - The app uses a mock API with a `database.json` file in the `api/` directory.
@@ -44,12 +44,10 @@ HEMA Tracker is a web application for tracking Historical European Martial Arts 
 ```
 HEMA-tracker/
   ├── api/                # Mock database (JSON)
-  ├── public/             # Static assets
   ├── src/
   │   ├── components/     # React components (auth, dashboard, nav, sessions)
   │   ├── services/       # API service modules
   │   ├── App.jsx         # Main app component
-  │   └── ...
   ├── package.json
   └── README.md
 ```
