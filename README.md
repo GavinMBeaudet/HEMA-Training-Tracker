@@ -18,7 +18,7 @@ HEMA Tracker is a web application for tracking Historical European Martial Arts 
 ### Installation
 1. Clone the repository:
    ```bash
-   git clone <your-repo-url>
+   git clone git@github.com:KingVitaman/HEMA-tracker.git
    cd HEMA-tracker
    ```
 2. Install dependencies:
