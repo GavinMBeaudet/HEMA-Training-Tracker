@@ -7,6 +7,7 @@ import {
   updateTrainingSession,
   getUserSessions,
 } from "../../services/userSessions";
+import "./SessionForm.css";
 
 export const EditSession = () => {
   const navigate = useNavigate();
@@ -22,22 +23,23 @@ export const EditSession = () => {
   const [weaponTypes, setWeaponTypes] = useState([]);
   const [trainingTypes, setTrainingTypes] = useState([]);
   const [trainingFocuses, setTrainingFocuses] = useState([]);
+  const [title, setTitle] = useState("");
 
   useEffect(() => {
     getWeaponTypes().then(setWeaponTypes);
     getTrainingTypes().then(setTrainingTypes);
     getTrainingFocuses().then(setTrainingFocuses);
-    // Fetch the session to edit
     getUserSessions().then((sessions) => {
-      const session = sessions.find(session => session.id === Number(id));
+      const session = sessions.find((session) => session.id === Number(id));
       if (session) {
-        setDate(session.date || "");
-        setDuration(session.duration || "");
-        setWeaponType(session.weaponTypeId || "");
-        setTrainingType(session.trainingTypeId || "");
-        setIntensity(session.intensity || "");
-        setNotes(session.notes || "");
-        setFocusAreas(session.focusAreas || []);
+        setDate(session.date);
+        setDuration(session.duration);
+        setWeaponType(session.weaponTypeId);
+        setTrainingType(session.trainingTypeId);
+        setIntensity(session.intensity);
+        setNotes(session.notes);
+        setFocusAreas(session.focusAreas);
+        setTitle(session.title);
       }
     });
   }, [id]);
@@ -55,6 +57,7 @@ export const EditSession = () => {
     const user = JSON.parse(localStorage.getItem("HEMA_user"));
     const updatedSession = {
       userId: user.id,
+      title,
       date,
       duration,
       weaponTypeId: weaponType,
@@ -70,13 +73,22 @@ export const EditSession = () => {
   return (
     <div>
       <h1>Edit Training Session</h1>
-      <form onSubmit={handleSubmit}>
+      <form className="session-form" onSubmit={handleSubmit}>
+        <div>
+          <label>Title</label>
+          <input
+            type="text"
+            value={title}
+            onChange={(event) => setTitle(event.target.value)}
+            placeholder="Session Title"
+          />
+        </div>
         <div>
           <label>Date</label>
           <input
             type="date"
             value={date}
-            onChange={(e) => setDate(e.target.value)}
+            onChange={(event) => setDate(event.target.value)}
           />
         </div>
         <div>
@@ -84,19 +96,19 @@ export const EditSession = () => {
           <input
             type="number"
             value={duration}
-            onChange={(e) => setDuration(e.target.value)}
+            onChange={(event) => setDuration(event.target.value)}
           />
         </div>
         <div>
           <label>Weapon Type</label>
           <select
             value={weaponType}
-            onChange={(e) => setWeaponType(e.target.value)}
+            onChange={(event) => setWeaponType(event.target.value)}
           >
             <option value="">Select a weapon type</option>
-            {weaponTypes.map((wt) => (
-              <option key={wt.id} value={wt.id}>
-                {wt.name}
+            {weaponTypes.map((weapontype) => (
+              <option key={weapontype.id} value={weapontype.id}>
+                {weapontype.name}
               </option>
             ))}
           </select>
@@ -105,12 +117,12 @@ export const EditSession = () => {
           <label>Training Type</label>
           <select
             value={trainingType}
-            onChange={(e) => setTrainingType(e.target.value)}
+            onChange={(event) => setTrainingType(event.target.value)}
           >
             <option value="">Select a training type</option>
-            {trainingTypes.map((tt) => (
-              <option key={tt.id} value={tt.id}>
-                {tt.name}
+            {trainingTypes.map((trainingtype) => (
+              <option key={trainingtype.id} value={trainingtype.id}>
+                {trainingtype.name}
               </option>
             ))}
           </select>
@@ -122,7 +134,7 @@ export const EditSession = () => {
             min="1"
             max="10"
             value={intensity}
-            onChange={(e) => setIntensity(e.target.value)}
+            onChange={(event) => setIntensity(event.target.value)}
           />
         </div>
         <div>
@@ -146,7 +158,7 @@ export const EditSession = () => {
           <input
             type="text"
             value={notes}
-            onChange={(e) => setNotes(e.target.value)}
+            onChange={(event) => setNotes(event.target.value)}
           />
         </div>
         <div>

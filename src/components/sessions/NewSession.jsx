@@ -6,6 +6,7 @@ import {
   getTrainingFocuses,
   createTrainingSession,
 } from "../../services/userSessions";
+import "./SessionForm.css";
 
 export const NewSession = () => {
   const navigate = useNavigate();
@@ -19,6 +20,7 @@ export const NewSession = () => {
   const [weaponTypes, setWeaponTypes] = useState([]);
   const [trainingTypes, setTrainingTypes] = useState([]);
   const [trainingFocuses, setTrainingFocuses] = useState([]);
+  const [title, setTitle] = useState("");
 
   useEffect(() => {
     getWeaponTypes().then(setWeaponTypes);
@@ -39,6 +41,7 @@ export const NewSession = () => {
     const user = JSON.parse(localStorage.getItem("HEMA_user"));
     const session = {
       userId: user.id,
+      title,
       date,
       duration,
       weaponTypeId: weaponType,
@@ -54,13 +57,22 @@ export const NewSession = () => {
   return (
     <div>
       <h1>New Training Sessions</h1>
-      <form onSubmit={handleSubmit}>
+      <form className="session-form" onSubmit={handleSubmit}>
+        <div>
+          <label>Title</label>
+          <input
+            type="text"
+            value={title}
+            onChange={(event) => setTitle(event.target.value)}
+            placeholder="Session Title"
+          />
+        </div>
         <div>
           <label>Date</label>
           <input
             type="date"
             value={date}
-            onChange={(e) => setDate(e.target.value)}
+            onChange={(event) => setDate(event.target.value)}
           />
         </div>
         <div>
@@ -68,7 +80,7 @@ export const NewSession = () => {
           <input
             type="number"
             value={duration}
-            onChange={(e) => setDuration(e.target.value)}
+            onChange={(event) => setDuration(event.target.value)}
           />
         </div>
         <div>
@@ -78,9 +90,9 @@ export const NewSession = () => {
             onChange={(e) => setWeaponType(e.target.value)}
           >
             <option value="">Select a weapon type</option>
-            {weaponTypes.map((wt) => (
-              <option key={wt.id} value={wt.id}>
-                {wt.name}
+            {weaponTypes.map((weapontype) => (
+              <option key={weapontype.id} value={weapontype.id}>
+                {weapontype.name}
               </option>
             ))}
           </select>
@@ -111,7 +123,7 @@ export const NewSession = () => {
         </div>
         <div>
           <label>Focus Areas</label>
-          <div>
+          <div className="focus-areas-grid">
             {trainingFocuses.map((focus) => (
               <label key={focus.id} style={{ marginRight: "1em" }}>
                 <input

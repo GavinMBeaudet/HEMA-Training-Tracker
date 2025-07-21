@@ -26,8 +26,8 @@ export const Register = ({ setIsLoggedIn }) => {
     })
   }
 
-  const handleRegister = (e) => {
-    e.preventDefault()
+  const handleRegister = (event) => {
+    event.preventDefault()
     if (user.password !== confirmPassword) {
       window.alert("Passwords do not match")
       return
@@ -41,9 +41,9 @@ export const Register = ({ setIsLoggedIn }) => {
     })
   }
 
-  const updateUser = (evt) => {
+  const updateUser = (event) => {
     const copy = { ...user }
-    copy[evt.target.id] = evt.target.value
+    copy[event.target.id] = event.target.value
     setUser(copy)
   }
 
@@ -80,7 +80,7 @@ export const Register = ({ setIsLoggedIn }) => {
         <fieldset>
           <div className="form-group">
             <input
-              onChange={(evt) => setConfirmPassword(evt.target.value)}
+              onChange={(event) => setConfirmPassword(event.target.value)}
               type="password"
               id="confirmPassword"
               className="form-control"

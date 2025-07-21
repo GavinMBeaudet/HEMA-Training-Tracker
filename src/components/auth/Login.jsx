@@ -9,8 +9,8 @@ export const Login = ({ setIsLoggedIn }) => {
   const [password, setPassword] = useState("hashedpassword123")
   const navigate = useNavigate()
 
-  const handleLogin = async (e) => {
-    e.preventDefault()
+  const handleLogin = async (event) => {
+    event.preventDefault()
 
     loginUser(email, password).then((foundUsers) => {
       if (foundUsers.length === 1) {
@@ -42,7 +42,7 @@ export const Login = ({ setIsLoggedIn }) => {
               <input
                 type="email"
                 value={email}
-                onChange={(evt) => setEmail(evt.target.value)}
+                onChange={(event) => setEmail(event.target.value)}
                 className="form-control"
                 placeholder="Email address"
                 required
@@ -55,7 +55,7 @@ export const Login = ({ setIsLoggedIn }) => {
               <input
                 type="password"
                 value={password}
-                onChange={(evt) => setPassword(evt.target.value)}
+                onChange={(event) => setPassword(event.target.value)}
                 className="form-control"
                 placeholder="Password"
                 required

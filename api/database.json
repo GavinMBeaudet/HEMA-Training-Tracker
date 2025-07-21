@@ -175,33 +175,26 @@
   "trainingSessions": [
     {
       "userId": 1,
+      "title": "Forms Training",
       "date": "2024-01-15",
       "duration": 90,
       "weaponTypeId": 1,
       "trainingTypeId": 1,
       "intensity": 7,
       "notes": "Worked on basic sword forms and footwork patterns",
-      "focusAreas": [
-        5,
-        4,
-        7
-      ],
+      "focusAreas": [5, 4, 7],
       "id": 1
     },
     {
       "userId": 1,
+      "title": "Sparring with Mace and Shield",
       "date": "2024-01-17",
       "duration": 60,
       "weaponTypeId": 2,
       "trainingTypeId": 2,
       "intensity": 8,
       "notes": "Sparring session focusing on mace strikes and shield blocks",
-      "focusAreas": [
-        1,
-        2,
-        3,
-        4
-      ],
+      "focusAreas": [1, 2, 3, 4],
       "id": 2
     },
     {
@@ -278,18 +271,15 @@
     },
     {
       "userId": 1,
-      "date": "2025-07-17",
-      "duration": "60",
-      "weaponTypeId": "2",
-      "trainingTypeId": "2",
-      "intensity": "8",
-      "notes": "Sparred for an hour against Bob",
-      "focusAreas": [
-        7,
-        4,
-        5
-      ],
-      "id": 9
+      "title": "German Footwork Practice",
+      "date": "2025-07-18",
+      "duration": "15",
+      "weaponTypeId": "1",
+      "trainingTypeId": "1",
+      "intensity": "5",
+      "notes": "Just ran through a kata before work.",
+      "focusAreas": [1],
+      "id": 10
     }
   ]
 }

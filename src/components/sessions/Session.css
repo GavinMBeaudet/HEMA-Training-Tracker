@@ -1,0 +1,85 @@
+.container-session {
+  text-align: center;
+  margin: 2rem auto;
+}
+
+.session-list {
+  width: 60%;
+  margin: 2rem auto;
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.session-list h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.session-list p {
+  margin: 0.25rem 0;
+}
+
+.session-list button {
+  margin: 0.5rem 0.5rem 1rem 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: 1px solid var(--outline);
+  background: var(--primary);
+  color: var(--offWhite);
+  cursor: pointer;
+}
+
+.session-list button:hover {
+  background: var(--secondary);
+}
+
+.session-card {
+  background-color: var(--offWhite);
+  border: 1px solid var(--outline);
+  border-radius: 10px;
+  box-shadow: 1px 2px 5px lightgray;
+  padding: 1.5rem 2rem;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.session-card .edit-btn {
+  background: #1976d2;
+  color: #fff;
+  border: 1px solid #1976d2;
+}
+.session-card .edit-btn:hover {
+  background: #1565c0;
+  color: #e3f2fd;
+}
+
+.session-card .delete-btn {
+  background: #d32f2f;
+  color: #fff;
+  border: 1px solid #d32f2f;
+}
+.session-card .delete-btn:hover {
+  background: #b71c1c;
+  color: #ffcdd2;
+}
+
+.new-session-btn {
+  background: #388e3c;
+  color: #fff;
+  border: 1px solid #388e3c;
+  border-radius: 10px;
+  padding: 1.5rem 2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+  box-shadow: 1px 2px 5px lightgray;
+  transition: background 0.2s, color 0.2s;
+}
+.new-session-btn:hover {
+  background: #1b5e20;
+  color: #c8e6c9;
+}
