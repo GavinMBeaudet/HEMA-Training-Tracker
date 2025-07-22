@@ -19,6 +19,21 @@
       "id": 4,
       "email": "sarah.jones@email.com",
       "password": "hashedpassword101"
+    },
+    {
+      "email": "god@godmail.com",
+      "password": "1324",
+      "id": 5
+    },
+    {
+      "email": "me@me.com",
+      "password": "me",
+      "id": 6
+    },
+    {
+      "email": "gghhhg@memail.com",
+      "password": "dink",
+      "id": 7
     }
   ],
   "weaponTypes": [
@@ -28,11 +43,11 @@
     },
     {
       "id": 2,
-      "name": "Bow"
+      "name": "Mace and Shield"
     },
     {
       "id": 3,
-      "name": "Staff"
+      "name": "Halberd"
     },
     {
       "id": 4,
@@ -73,7 +88,7 @@
       "name": "Weapon Maintenance"
     }
   ],
-  "traingingFocuses": [
+  "trainingFocuses": [
     {
       "id": 1,
       "name": "Footwork"
@@ -159,30 +174,42 @@
   ],
   "trainingSessions": [
     {
-      "id": 1,
       "userId": 1,
+      "title": "Forms Training",
       "date": "2024-01-15",
       "duration": 90,
       "weaponTypeId": 1,
       "trainingTypeId": 1,
-      "focusId": 1,
       "intensity": 7,
-      "notes": "Worked on basic sword forms and footwork patterns"
+      "notes": "Worked on basic sword forms and footwork patterns",
+      "focusAreas": [
+        5,
+        4,
+        7
+      ],
+      "id": 1
     },
     {
-      "id": 2,
       "userId": 1,
+      "title": "Sparring with Mace and Shield",
       "date": "2024-01-17",
       "duration": 60,
       "weaponTypeId": 2,
       "trainingTypeId": 2,
-      "focusId": 2,
       "intensity": 8,
-      "notes": "Archery practice focusing on precision and aim"
+      "notes": "Sparring session focusing on mace strikes and shield blocks",
+      "focusAreas": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "id": 2
     },
     {
       "id": 3,
       "userId": 2,
+      "title": "Staff Form Training",
       "date": "2024-01-18",
       "duration": 75,
       "weaponTypeId": 3,
@@ -194,6 +221,7 @@
     {
       "id": 4,
       "userId": 2,
+      "title": "Meditation",
       "date": "2024-01-20",
       "duration": 45,
       "weaponTypeId": 6,
@@ -205,6 +233,7 @@
     {
       "id": 5,
       "userId": 3,
+      "title": "Dagger Training",
       "date": "2024-01-22",
       "duration": 120,
       "weaponTypeId": 4,
@@ -216,6 +245,7 @@
     {
       "id": 6,
       "userId": 3,
+      "title": "Spear Training",
       "date": "2024-01-24",
       "duration": 90,
       "weaponTypeId": 5,
@@ -227,6 +257,7 @@
     {
       "id": 7,
       "userId": 4,
+      "title": "Sword Sparring",
       "date": "2024-01-25",
       "duration": 60,
       "weaponTypeId": 1,
@@ -238,13 +269,46 @@
     {
       "id": 8,
       "userId": 4,
+      "title": "Mace and Shield Practice",
       "date": "2024-01-27",
       "duration": 105,
       "weaponTypeId": 2,
       "trainingTypeId": 3,
       "focusId": 8,
       "intensity": 6,
-      "notes": "Bow form practice with balance and stance work"
+      "notes": "Mace and shield practice focusing on defense and counter-attacks"
+    },
+    {
+      "userId": 1,
+      "title": "German Footwork Practice",
+      "date": "2025-07-18",
+      "duration": "15",
+      "weaponTypeId": "1",
+      "trainingTypeId": "1",
+      "intensity": "5",
+      "notes": "Just ran through a kata before work.",
+      "focusAreas": [
+        1
+      ],
+      "id": 10
+    },
+    {
+      "userId": 1,
+      "title": "Title",
+      "date": "",
+      "duration": "0",
+      "weaponTypeId": "",
+      "trainingTypeId": "",
+      "intensity": 1,
+      "notes": "wack",
+      "focusAreas": [
+        1,
+        4,
+        5,
+        7,
+        8
+      ],
+      "id": 11
     }
   ]
 }
