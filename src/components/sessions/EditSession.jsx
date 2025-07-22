@@ -29,6 +29,7 @@ export const EditSession = () => {
     getWeaponTypes().then(setWeaponTypes);
     getTrainingTypes().then(setTrainingTypes);
     getTrainingFocuses().then(setTrainingFocuses);
+
     getUserSessions().then((sessions) => {
       const session = sessions.find((session) => session.id === Number(id));
       if (session) {
@@ -52,8 +53,8 @@ export const EditSession = () => {
     );
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const handleSubmit = async (event) => {
+    event.preventDefault();
     const user = JSON.parse(localStorage.getItem("HEMA_user"));
     const updatedSession = {
       userId: user.id,

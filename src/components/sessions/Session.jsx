@@ -14,8 +14,8 @@ export const SessionList = () => {
 
   useEffect(() => {
     getUserSessions().then((trainingSessionObj) =>
-      setSessions(trainingSessionObj)
-    );
+      setSessions(trainingSessionObj));
+
     getTrainingFocuses().then(setFocuses);
   }, []);
 
