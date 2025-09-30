@@ -88,7 +88,7 @@ export const NewSession = () => {
           <label>Weapon Type</label>
           <select
             value={weaponType}
-            onChange={(e) => setWeaponType(e.target.value)}
+            onChange={(event) => setWeaponType(event.target.value)}
           >
             <option value="">Select a weapon type</option>
             {weaponTypes.map((weapontype) => (
@@ -102,12 +102,12 @@ export const NewSession = () => {
           <label>Training Type</label>
           <select
             value={trainingType}
-            onChange={(e) => setTrainingType(e.target.value)}
+            onChange={(event) => setTrainingType(event.target.value)}
           >
             <option value="">Select a training type</option>
-            {trainingTypes.map((tt) => (
-              <option key={tt.id} value={tt.id}>
-                {tt.name}
+            {trainingTypes.map((trainingType) => (
+              <option key={trainingType.id} value={trainingType.id}>
+                {trainingType.name}
               </option>
             ))}
           </select>
@@ -119,14 +119,14 @@ export const NewSession = () => {
             min="1"
             max="10"
             value={intensity}
-            onChange={(e) => setIntensity(e.target.value)}
+            onChange={(event) => setIntensity(event.target.value)}
           />
         </div>
         <div>
           <label>Focus Areas</label>
           <div className="focus-areas-grid">
             {trainingFocuses.map((focus) => (
-              <label key={focus.id} style={{ marginRight: "1em" }}>
+              <label key={focus.id} className="focus-area-checkbox">
                 <input
                   type="checkbox"
                   value={focus.id}
@@ -143,7 +143,7 @@ export const NewSession = () => {
           <input
             type="text"
             value={notes}
-            onChange={(e) => setNotes(e.target.value)}
+            onChange={(event) => setNotes(event.target.value)}
           />
         </div>
         <div>

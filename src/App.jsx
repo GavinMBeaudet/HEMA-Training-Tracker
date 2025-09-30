@@ -10,7 +10,7 @@ import { EditSession } from './components/sessions/EditSession';
 import './App.css'
 
 export const App = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(!!localStorage.getItem("HEMA_user"));
+  const [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem("HEMA_user"));
 
   return (
     <Routes>

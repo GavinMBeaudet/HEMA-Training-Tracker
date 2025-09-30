@@ -1,0 +1,51 @@
+.filter-session {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 100%;
+  margin-bottom: 2em;
+}
+
+.filter-session input[type="text"],
+.filter-session select {
+  width: 100%;
+  padding: 1em;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1em;
+  background: #fff;
+  color: #222;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.filter-session input[type="text"]:focus,
+.filter-session select:focus {
+  border-color: #7cb342;
+  box-shadow: 0 0 0 2px #c8e6c9;
+  outline: none;
+}
+
+.new-session-btn {
+  width: 100%;
+  background: #4e9c2c;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 1em 0;
+  font-size: 1.15em;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 1em;
+  transition: background 0.2s;
+}
+
+.new-session-btn:hover {
+  background: #388e3c;
+}
+
+.filter-session input[type="text"] {
+  width: 100%;
+  max-width: 700px;
+  box-sizing: border-box;
+}
