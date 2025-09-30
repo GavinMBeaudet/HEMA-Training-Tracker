@@ -47,27 +47,29 @@ export const Dashboard = () => {
 
   return (
     <div className="dashboard-container">
-      <h1>Welcome back, fighter!</h1>
-      <div className="dashboard-stats">
-        <div className="dashboard-card">
-          <h2>{stats.totalSessions}</h2>
-          <p>Total Sessions</p>
+      <div className="dashboard-content">
+        <h1>Welcome back, fighter!</h1>
+        <div className="dashboard-stats">
+          <div className="dashboard-card">
+            <h2>{stats.totalSessions}</h2>
+            <p>Total Sessions</p>
+          </div>
+          <div className="dashboard-card">
+            <h2>{stats.hoursTrained}</h2>
+            <p>Hours Trained</p>
+          </div>
+          <div className="dashboard-card">
+            <h2>{stats.avgIntensity}</h2>
+            <p>Avg Intensity</p>
+          </div>
         </div>
-        <div className="dashboard-card">
-          <h2>{stats.hoursTrained}</h2>
-          <p>Hours Trained</p>
-        </div>
-        <div className="dashboard-card">
-          <h2>{stats.avgIntensity}</h2>
-          <p>Avg Intensity</p>
-        </div>
+        <button
+          className="new-session-btn"
+          onClick={() => navigate("/sessions/new")}
+        >
+          + New Training Session
+        </button>
       </div>
-      <button
-        className="new-session-btn"
-        onClick={() => navigate("/sessions/new")}
-      >
-        + New Training Session
-      </button>
     </div>
   );
 };

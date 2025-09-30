@@ -1,3 +1,12 @@
+/* Reset and base styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f7f9fa;
+  color: #222;
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -39,4 +48,272 @@
 
 .read-the-docs {
   color: #888;
+}
+
+/* Header/NavBar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #7cb342;
+  color: #fff;
+  padding: 1.2em 2em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 2em;
+  font-weight: 500;
+  font-size: 1.05em;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+/* Main container */
+.container-session,
+.dashboard-container,
+.form-container {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  padding: 2em;
+  margin: 2em auto;
+  max-width: 700px;
+  padding-top: 4em; /* Added top padding to avoid content being hidden behind navbar */
+}
+
+.container-session {
+  max-width: 900px;
+  margin: 5em auto 2em auto;
+  padding: 0 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Page heading */
+h1 {
+  font-size: 1.5em;
+  font-weight: 600;
+  margin-bottom: 1em;
+  color: #222;
+  text-align: center;
+}
+
+/* Filter bar */
+.filter-session {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 100%;
+  margin-bottom: 2em;
+}
+
+.filter-session input[type="text"],
+.filter-session select {
+  width: 100%;
+  padding: 0.75em 1em;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1em;
+  background: #fff;
+  color: #222;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.filter-session input[type="text"]:focus,
+.filter-session select:focus {
+  border-color: #7cb342;
+  box-shadow: 0 0 0 2px #c8e6c9;
+  outline: none;
+}
+
+.filter-session select {
+  min-width: 180px;
+}
+
+.new-session-btn {
+  background: #7cb342;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75em 1.5em;
+  font-size: 1em;
+  font-weight: 500;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 2em;
+  transition: background 0.2s;
+}
+
+.new-session-btn:hover {
+  background: #558b2f;
+}
+
+/* Session cards */
+.session-list {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.session-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  padding: 1.5em 2em;
+  margin-bottom: 2em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  align-items: stretch;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Card header and meta info in a row */
+.session-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.5em;
+}
+
+.session-card h2 {
+  font-size: 1.15em;
+  font-weight: 600;
+  margin: 0;
+}
+
+.session-meta-row {
+  display: flex;
+  gap: 2em;
+  font-size: 1em;
+  margin-bottom: 0.5em;
+}
+
+.session-meta-row span {
+  display: block;
+  color: #444;
+}
+
+/* Focus areas as tags in a row */
+.session-tags {
+  display: flex;
+  gap: 0.5em;
+  margin: 0.5em 0;
+}
+
+.session-tag {
+  background: #e8f5e9;
+  color: #388e3c;
+  border-radius: 16px;
+  padding: 0.3em 1em;
+  font-size: 0.95em;
+  font-weight: 500;
+  border: 1px solid #c8e6c9;
+  display: inline-block;
+}
+
+/* Notes section below meta info */
+.session-card .notes-label {
+  font-weight: 600;
+  margin-top: 0.5em;
+  margin-bottom: 0.2em;
+  color: #222;
+  font-size: 1em;
+}
+
+/* Buttons in a row */
+.session-card-actions {
+  display: flex;
+  gap: 1em;
+  margin-top: 1em;
+}
+
+.edit-btn, .delete-btn {
+  border: none;
+  border-radius: 8px;
+  padding: 0.5em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.edit-btn {
+  background: #2196f3;
+  color: #fff;
+}
+
+.edit-btn:hover {
+  background: #1976d2;
+}
+
+.delete-btn {
+  background: #f44336;
+  color: #fff;
+}
+
+.delete-btn:hover {
+  background: #d32f2f;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .container-session {
+    max-width: 98vw;
+    padding: 0 0.5em;
+  }
+  .session-card {
+    padding: 1em;
+    max-width: 98vw;
+  }
+  .session-meta-row {
+    flex-direction: column;
+    gap: 0.5em;
+  }
+  .session-card-header {
+    flex-direction: column;
+    gap: 0.5em;
+  }
+  .session-card-actions {
+    flex-direction: column;
+    gap: 0.5em;
+  }
+}
+
+@media (max-width: 700px) {
+  .container-session,
+  .dashboard-container,
+  .form-container {
+    padding: 1em;
+    margin: 1em;
+  }
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1em;
+  }
+}
+
+@media (max-width: 500px) {
+  .container-session {
+    max-width: 98vw;
+    padding: 0 0.5em;
+  }
+  .session-card {
+    padding: 1em;
+  }
 }
