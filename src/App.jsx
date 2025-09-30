@@ -23,13 +23,13 @@ export const App = () => {
           </>
         }
       >
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/sessions" element={<SessionList />} />
-        <Route path="/sessions/new" element={<NewSession />} />
-        <Route path="/sessions/edit/:id" element={<EditSession />} />
-        <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} />} />
-        <Route path="/register" element={<Register setIsLoggedIn={setIsLoggedIn} />} />
-        <Route path="/" element={<Login setIsLoggedIn={setIsLoggedIn} />} />
+        <Route index element={<Login setIsLoggedIn={setIsLoggedIn} />} />
+        <Route path="dashboard" element={<Dashboard />} />
+        <Route path="sessions" element={<SessionList />} />
+        <Route path="sessions/new" element={<NewSession />} />
+        <Route path="sessions/edit/:id" element={<EditSession />} />
+        <Route path="login" element={<Login setIsLoggedIn={setIsLoggedIn} />} />
+        <Route path="register" element={<Register setIsLoggedIn={setIsLoggedIn} />} />
       </Route>
     </Routes>
   )
